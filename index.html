@@ -1,1 +1,417 @@
+ 
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्री राम मंदिर, भेंडाळी</title>
+<meta name="description" content="श्री राम मंदिर, भेंडाळी - दर्शन, कार्यक्रम, अभिषेक बुकिंग आणि मंदिराची माहिती.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --saffron:#c66a16;
+  --dark:#59351e;
+  --cream:#fff9ed;
+  --gold:#d6a34b;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family:'Noto Sans Devanagari',sans-serif;
+  background:var(--cream);
+  color:#3e3025;
+  line-height:1.7;
+}
+
+header {
+  background:#fffdf7;
+  padding:12px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 12px #00000012;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--dark);
+  font-weight:800;
+  font-size:17px;
+}
+
+.logo-icon {
+  background:#f6e5c9;
+  border-radius:50%;
+  padding:8px;
+  font-size:25px;
+}
+
+nav {
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+nav a {
+  color:var(--dark);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.menu-btn {
+  display:none;
+  background:var(--saffron);
+  color:white;
+  border:0;
+  padding:8px 13px;
+  border-radius:7px;
+  font-size:20px;
+}
+
+.hero {
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:65px 20px;
+  background:
+  linear-gradient(#49240c70,#49240c80),
+  url('https://images.unsplash.com/photo-1604608672516-3a9c7b8b7a9c?auto=format&fit=crop&w=1600&q=85');
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.hero-content {
+  max-width:750px;
+}
+
+.hero .om {
+  font-size:55px;
+  color:#ffdf9d;
+}
+
+.hero h1 {
+  font-size:clamp(32px,7vw,58px);
+  margin:12px 0;
+}
+
+.hero p {
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 24px;
+  background:var(--saffron);
+  color:white;
+  text-decoration:none;
+  border-radius:7px;
+  margin:5px;
+  font-weight:700;
+}
+
+.btn-light {
+  background:#fff8e9;
+  color:var(--dark);
+}
+
+section {
+  padding:60px 6%;
+  scroll-margin-top:80px;
+}
+
+.section-title {
+  text-align:center;
+  color:var(--dark);
+  font-size:29px;
+  margin-bottom:12px;
+}
+
+.subtitle {
+  text-align:center;
+  color:#846d56;
+  margin-bottom:35px;
+}
+
+.about {
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.card {
+  background:white;
+  padding:25px 20px;
+  border-radius:12px;
+  border:1px solid #efdfc8;
+  text-align:center;
+  box-shadow:0 4px 15px #57371a0b;
+}
+
+.card .icon {
+  font-size:38px;
+}
+
+.card h3 {
+  color:var(--dark);
+  margin:10px 0;
+}
+
+.card p {
+  font-size:14px;
+  color:#725e4b;
+}
+
+.alt {
+  background:#f5ead7;
+}
+
+.live {
+  background:#663c20;
+  color:white;
+  text-align:center;
+}
+
+.live .section-title {
+  color:#ffe3ad;
+}
+
+.live p {
+  margin-bottom:20px;
+}
+
+.live-box {
+  max-width:750px;
+  margin:25px auto;
+  background:#382315;
+  padding:15px;
+  border-radius:12px;
+}
+
+.live-box iframe {
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:8px;
+}
+
+.contact {
+  text-align:center;
+}
+
+footer {
+  background:#422a1b;
+  color:#f8e9d2;
+  text-align:center;
+  padding:28px 15px;
+  font-size:14px;
+}
+
+footer p {
+  margin:5px;
+}
+
+@media(max-width:750px) {
+  header {
+    flex-wrap:wrap;
+  }
+
+  .menu-btn {
+    display:block;
+  }
+
+  nav {
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding-top:10px;
+  }
+
+  nav.show {
+    display:flex;
+  }
+
+  nav a {
+    padding:10px;
+    width:100%;
+    border-bottom:1px solid #eee1d0;
+  }
+
+  .hero {
+    min-height:410px;
+  }
+
+  section {
+    padding:45px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-icon">🚩</span>
+    <span>श्री राम मंदिर<br>भेंडाळी</span>
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="#home">मुख्यपृष्ठ</a>
+    <a href="#about">मंदिर माहिती</a>
+    <a href="#events">कार्यक्रम</a>
+    <a href="#booking">अभिषेक बुकिंग</a>
+    <a href="#live">Live दर्शन</a>
+    <a href="#contact">संपर्क</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="om">॥ श्री राम ॥</div>
+    <h1>श्री राम मंदिर, भेंडाळी</h1>
+    <p>भक्ती • श्रद्धा • सेवा • संस्कार</p>
+    <a href="#about" class="btn">मंदिराबद्दल जाणून घ्या</a>
+    <a href="#live" class="btn btn-light">Live दर्शन</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2 class="section-title">🙏 मंदिर परिचय</h2>
+  <p class="subtitle">श्री राम मंदिर, भेंडाळी येथे आपले हार्दिक स्वागत!</p>
+
+  <div class="about">
+    <p>
+      श्री राम मंदिर, भेंडाळी हे भाविकांच्या श्रद्धेचे
+      आणि भक्तीचे पवित्र स्थान आहे. येथे विविध धार्मिक
+      कार्यक्रम, पूजा, उत्सव आणि सामाजिक उपक्रम
+      आयोजित केले जातात.
+    </p>
+    <p style="margin-top:15px">
+      जय श्री राम! 🚩
+    </p>
+  </div>
+</section>
+
+<section class="alt" id="events">
+  <h2 class="section-title">धार्मिक कार्यक्रम</h2>
+  <p class="subtitle">मंदिरातील विविध धार्मिक उपक्रम</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🚩</div>
+      <h3>श्री राम नवमी</h3>
+      <p>श्री राम जन्मोत्सव आणि धार्मिक कार्यक्रम.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🙏</div>
+      <h3>अखंड हरिनाम सप्ताह</h3>
+      <p>भजन, कीर्तन आणि हरिनामाचा भक्तिमय सोहळा.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🪔</div>
+      <h3>महाआरती</h3>
+      <p>मंदिरातील विविध धार्मिक आरती आणि पूजा.</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2 class="section-title">अभिषेक बुकिंग</h2>
+  <p class="subtitle">आपल्या अभिषेकासाठी ऑनलाइन बुकिंग सुविधा</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🪔</div>
+      <h3>अभिषेक नोंदणी</h3>
+      <p>अभिषेकासाठी तारीख आणि वेळ निवडा.</p>
+      <a href="#" class="btn" onclick="alert('अभिषेक बुकिंग लिंक अद्याप जोडलेली नाही.');return false;">बुकिंग करा</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>स्वयंसेवक नोंदणी</h3>
+      <p>मंदिर सेवेमध्ये सहभागी व्हा.</p>
+      <a href="#" class="btn" onclick="alert('स्वयंसेवक नोंदणी लिंक अद्याप जोडलेली नाही.');return false;">नोंदणी करा</a>
+    </div>
+  </div>
+</section>
+
+<section class="live" id="live">
+  <h2 class="section-title">📺 मंदिर Live दर्शन</h2>
+  <p>श्री राम मंदिराचे ऑनलाइन दर्शन घ्या.</p>
+
+  <div class="live-box">
+    <p>YouTube Live लिंक लवकरच जोडली जाईल.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <h2 class="section-title">फोटो गॅलरी</h2>
+  <p class="subtitle">मंदिरातील सुंदर क्षण</p>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">📸</div>
+      <h3>मंदिराचे फोटो</h3>
+      <p>मंदिराचे आणि उत्सवांचे फोटो लवकरच येथे पाहता येतील.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">संपर्क</h2>
+  <p><b>श्री राम मंदिर, भेंडाळी</b></p>
+  <p>ता. निफाड, जि. नाशिक, महाराष्ट्र</p>
+  <p style="margin-top:15px">आपले हार्दिक स्वागत आहे! 🙏</p>
+</section>
+
+<footer>
+  <p>॥ जय श्री राम ॥ 🚩</p>
+  <p>श्री राम मंदिर, भेंडाळी</p>
+  <p>© 2026 सर्व हक्क मंदिर समितीचे अधीन</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav').classList.toggle('show');
+}
+
+document.querySelectorAll('#nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
 
